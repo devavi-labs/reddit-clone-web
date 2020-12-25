@@ -1,0 +1,8 @@
+query Posts($limit: Int!, $offset: Int!) {
+  posts(limit: $limit, offset: $offset) {
+    hasMore
+    posts {
+      ...PostSnippet
+    }
+  }
+}
